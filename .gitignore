@@ -1,0 +1,49 @@
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# 数据上传
+data/
+data_1/
+
+# 数据库
+# experiments.db
+*.db
+*.db-shm
+*.db-wal
+# 一些临时压缩包
+*.zip
+*.rar
+
+# 环境变量（包含敏感信息）
+.env.local
+.env.*.local
+.env.dev
+.env.prod
+
+# IDE
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 日志/临时文件
+*.log
+*.tmp
+
+# 额外移除
+黄金数据分析/
+git手册.md
+
+# 敏感爬虫代码，暂不上传
+wallstreetcn_kline_utils.py
