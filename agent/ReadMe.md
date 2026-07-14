@@ -12,3 +12,10 @@
 ## 后续更新项目包
 ```bash
 pip freeze > requirements.txt
+```
+
+## 服务端指令
+用于llamafactory+huggingface环境启动模型参考指令
+```bash
+CUDA_VISIBLE_DEVICES=1 API_PORT=8821 llamafactory-cli api     --model_name_or_path /home/xiezhongjun/hugging-face/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-7B/snapshots/916b56a44061fd5cd7d6a8fb632557ed4f724f60     --template deepseekr1     --infer_backend huggingface
+```
