@@ -1,0 +1,56 @@
+# ================================
+# LLM 配置
+# ================================
+# llm:
+#   provider: ollama
+#   model: modelscope.cn/Qwen/Qwen2.5-7B-Instruct-GGUF:latest
+#   temperature: 0.2
+#   base_url: http://localhost:11434
+#   num_ctx: 8192          # 上下文长度，与本地脚本一致
+#   timeout: 120           # 请求超时（秒），防止模型加载慢导致 502
+
+llm:
+  provider: ollama
+  model: modelscope.cn/Qwen/Qwen2.5-7B-Instruct-GGUF:latest
+  temperature: 0.2
+  base_url: http://127.0.0.1:11434/
+  num_ctx: 8192          # 上下文长度，与本地脚本一致
+  timeout: 120           # 请求超时（秒），防止模型加载慢导致 502
+
+
+# ================================
+# Web 搜索配置
+# ================================
+web:
+  # 默认搜索后端（与插件名称一致）
+  #backend: firecrawl
+  # 搜索和提取可以独立指定（可选）
+  search_backend: ddgs
+  extract_backend: firecrawl
+
+# ================================
+# Agent 执行配置（可选）
+# ================================
+agent:
+  # 是否启用详细日志输出（工具调用过程）
+  verbose: true
+  # 最大迭代次数（防止无限循环）
+  max_iterations: 5
+
+# ================================
+# url_safety 执行配置（可选）
+# ================================
+security:
+  allow_private_urls: false   # 默认 false（阻止私有地址）
+
+# ================================
+# website_policy 执行配置（可选）
+# ================================
+security:
+  website_blocklist:
+    enabled: false
+    domains:
+      - example.com
+      - "*.evil.net"
+    shared_files:
+      - "my_blocklist.txt"  # 屏蔽网站列表

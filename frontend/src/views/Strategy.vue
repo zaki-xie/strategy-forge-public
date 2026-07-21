@@ -307,7 +307,7 @@ function signalTagType(signal: number): 'success' | 'danger' | 'info' {
 function signalText(signal: number): string {
   if (signal === 1) return '买入'
   if (signal === -1) return '卖出'
-  return '持有'
+  return '保持(无操作)'
 }
 
 // 获取最新信号
